@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptado César y Escítala</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Encriptado César y Escítala</h1>
+  </header>
+  <main>
+    <section class="form-section">
+      <div class="form-card">
+        <h2>Cifrado César</h2>
+        <div class="form-group">
+          <label for="cesar-message">Mensaje</label>
+          <input type="text" id="cesar-message" placeholder="Ingresa tu mensaje">
+        </div>
+        <div class="form-group">
+          <label for="cesar-shift">Desplazamiento</label>
+          <input type="number" id="cesar-shift" placeholder="Ingresa el desplazamiento">
+        </div>
+        <div class="button-group">
+          <button onclick="cifrarCesar()">Cifrar</button>
+          <button onclick="descifrarCesar()">Descifrar</button>
+        </div>
+        <div class="output-container" id="cesar-output-container">
+          <label for="cesar-output">Mensaje Cifrado:</label>
+          <p id="cesar-output" class="output"></p>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2>Cifrado Escítala</h2>
+        <div class="form-group">
+          <label for="escitala-message">Mensaje</label>
+          <input type="text" id="escitala-message" placeholder="Ingresa tu mensaje">
+        </div>
+        <div class="form-group">
+          <label for="escitala-key">Clave (número de columnas)</label>
+          <input type="number" id="escitala-key" placeholder="Ingresa la clave">
+        </div>
+        <div class="button-group">
+          <button onclick="cifrarEscitala()">Cifrar</button>
+          <button onclick="descifrarEscitala()">Descifrar</button>
+        </div>
+        <div class="output-container" id="escitala-output-container">
+          <label for="escitala-output">Mensaje Cifrado:</label>
+          <p id="escitala-output" class="output"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Cuadro de Alerta -->
+  <div id="alert-box" class="alert-box">
+    <p id="alert-message">Por favor, ingresa un mensaje y un desplazamiento válidos.</p>
+    <button id="close-alert" onclick="cerrarAlerta()">Cerrar</button>
+  </div>
+
+  <footer>
+    <p>Desarrollado por Jesus Cruz Zuñiga 7 "B"</p>
+    <p id="error-output"></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
